@@ -4,7 +4,7 @@ pipeline {
         stage('Git Checkout Code') {
             steps {
                 git branch: 'master', url: 'https://github.com/mohanpractice14242/actions.git'
-                ls 
+                ls -la
             }
         }
     }
