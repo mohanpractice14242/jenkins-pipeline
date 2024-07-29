@@ -4,7 +4,8 @@ pipeline{
         stage("cloining the repository"){
             steps{
                 script{
-                    git clone git@github.com:mohanpractice14242/actions.git
+                    git clone https://github.com/mohanpractice14242/jenkins-pipeline.git
+                    ls -l
                 }
             }
         }
