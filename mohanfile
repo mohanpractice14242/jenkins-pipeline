@@ -3,10 +3,10 @@ pipeline {
     stages {
         stage('Git Checkout Code') {
             steps {
-                script{
-                    git branch: 'master', url: 'https://github.com/mohanpractice14242/actions.git'
+               sh '''
+                     git branch: 'master', url: 'https://github.com/mohanpractice14242/actions.git'
                     ls -l
-                }
+                    '''
             }
         }
     }
