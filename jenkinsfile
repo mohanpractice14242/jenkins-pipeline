@@ -1,17 +1,21 @@
-pipeline{ 
-    agent any 
-    stages{
-        stage("cloining the repository"){
-            steps{
-                script{
-                     checkout([
+pipeline {
+    agent any
+    stages {
+        stage('Cloning the Repository') {
+            steps {
+                script {
+                    // Checkout from the Git repository
+                    checkout([
                         $class: 'GitSCM',
-                        branches: [[name: '*/main']],  // Update 'main' to the correct branch name
-                        userRemoteConfigs: [[url: 'https://github.com/mohanpractice14242/jenkins-pipeline.git']]
+                        branches: [[name: '*/main']],  // Update 'main' if a different branch is used
+                        userRemoteConfigs: [[
+                            url: 'https://github.com/mohanpractice14242/jenkins-pipeline.git'
+                            // Uncomment the next line if you need to specify credentials
+                            // credentialsId: 'your-credentials-id'
+                        ]]
                     ])
                 }
             }
         }
-
     }
 }
