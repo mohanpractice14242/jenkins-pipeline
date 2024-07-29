@@ -4,8 +4,11 @@ pipeline{
         stage("cloining the repository"){
             steps{
                 script{
-                    git clone https://github.com/mohanpractice14242/jenkins-pipeline.git
-                    ls -l
+                     checkout([
+                        $class: 'GitSCM',
+                        branches: [[name: '*/main']],  // Update 'main' to the correct branch name
+                        userRemoteConfigs: [[url: 'https://github.com/mohanpractice14242/jenkins-pipeline.git']]
+                    ])
                 }
             }
         }
