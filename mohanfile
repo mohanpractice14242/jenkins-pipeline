@@ -24,8 +24,8 @@ pipeline {
         stage("peform  the lintcode in python using the lint "){
             steps{
                 def result = sh(script: 'lintpy actions/src/main.py', returnStatus: true)
-                    if (result != 0) {
-                        echo "Build failed, but continuing..."
+                if (result != 0) {
+                    echo "Build failed, but continuing..."
         }
             }
         }
