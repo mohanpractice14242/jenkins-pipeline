@@ -28,8 +28,7 @@ pipeline {
         stage("installing the python "){
             steps{
                 sh '''
-                yum install python3
-                
+                pip install -r requirements.txt
                 
                  '''
             }
