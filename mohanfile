@@ -21,6 +21,20 @@ pipeline {
                 
             }
         }
+        stage('Build') {
+            steps {
+                script {
+                    def result = sh(script: 'pylint actions/src/main.py', returnStatus: true)
+            
+                    if (result != 0) {
+                        error "Pylint issues found. Failing the build."
+                    } else {
+                        echo "Pylint checks passed."
+            }
+        }
+    }
+}
+
         stage("perform the lint code in python using flask8"){
             steps{
                 sh '''
