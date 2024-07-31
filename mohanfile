@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Git Checkout Code') {
             steps {
-                sh '''git clone https://github.com/mohanpractice14242/jenkins-pipeline.git'''
+                sh '''git clone https://github.com/mohanpractice14242/jenkins-pipeline.git
+                    ls -l '''
                     
                 
               
