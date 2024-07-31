@@ -13,5 +13,13 @@ pipeline {
                 ls -l'''
             }
         }
+        stage("getting the code "){
+            steps{
+                sh '''
+                 git clone https://github.com/mohanpractice14242/actions.git
+                 ls -l
+                 '''
+            }
+        }
     }
 }
