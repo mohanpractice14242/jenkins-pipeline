@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        SUDO_PASSWORD = credentials('d0d11a00-371b-4b5f-b273-e05356033430') // Store password securely in Jenkins credentials
+        sudo_password = credentials('d0d11a00-371b-4b5f-b273-e05356033430') // Store password securely in Jenkins credentials
     }
     stages {
         stage('Git Checkout Code') {
