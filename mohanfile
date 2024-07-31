@@ -54,6 +54,12 @@ pipeline {
                 pytest python-testing/tests'''
             }
         }
+        stage("perform the unit testing"){
+            steps{
+                sh '''
+                pytest python-testing/unit_test'''
+            }
+        }
 
         }
     }
