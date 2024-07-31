@@ -50,7 +50,9 @@ pipeline {
         stage("performing the testcases "){
             steps{
                 sh'''
-                ls  -l'''
+                ls  -l
+                cd python-testing 
+                ls -l'''
             }
         }
 
