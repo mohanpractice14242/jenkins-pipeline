@@ -23,7 +23,7 @@ pipeline {
         stage("installing the python "){
             steps{
                 sh '''
-                sudo yum install python3
+                yum install python3
                 
                 
                  '''
