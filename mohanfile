@@ -52,7 +52,7 @@ pipeline {
                 sh'''
                 ls  -l
                 cd python-testing 
-                ls -l'''
+                pytest python-testing/tests'''
             }
         }
 
