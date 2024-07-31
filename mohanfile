@@ -21,18 +21,18 @@ pipeline {
                 
             }
         }
-        stage("installing the python "){
+        stage("peform  the lintcode in python using the lint "){
             steps{
                 sh '''
-                ls -l
+                pylint actions/src/main.py
                 
                  '''
             }
         }
-        stage("installing the dependencies"){
+        stage("perform the lint code in python using flask8"){
             steps{
                 sh '''
-                ls -l
+                
                 '''
             }
         }
