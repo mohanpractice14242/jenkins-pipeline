@@ -34,8 +34,6 @@ pipeline {
             }
            }
         }
-        stage("perform the lintcode test using the ")
-
         stage("perform the lint code in python using flask8"){
             steps{
                 script{
