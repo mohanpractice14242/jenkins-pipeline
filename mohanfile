@@ -30,17 +30,25 @@ pipeline {
                         error "Pylint issues found. Failing the build."
                     } else {
                         echo "Pylint checks passed."
+               }
             }
+           }
         }
-    }
-}
+        stage("perform the lintcode test using the ")
 
         stage("perform the lint code in python using flask8"){
             steps{
-                sh '''
+                script{
+                def result=sh(script: 'flake8 actions/src/main.py',returnStatus: true)
+                if(result !=0){
+                    error "flake8 issues found please write the code on agaun"
+                }else{
+                    echo "flake8 test is sucess"
+                }
+                }
+            }
                 
-                '''
             }
         }
     }
-}
+
