@@ -3,14 +3,18 @@ pipeline {
     stages {
         stage('Git Checkout Code') {
             steps {
-                sh '''ls -l
+                sh '''
+                git clone https://github.com/mohanpractice14242/actions.git
+                ls -l
                     '''
             }
         }
         stage("displaying the files"){
             steps{
                 sh '''
+                git clone https://github.com/mohantest14242/python-testing.git
                 ls -l'''
+                
             }
         }
         stage("getting the code "){
