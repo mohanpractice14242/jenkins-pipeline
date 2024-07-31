@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-     docker{
-            image 'python:3.8'
-            args '-u root'
-        }
-    }
+    agent any
     stages {
         stage('Git Checkout Code') {
             steps {
@@ -28,7 +23,7 @@ pipeline {
         stage("installing the python "){
             steps{
                 sh '''
-                pip install -r requirements.txt
+                yum install expect
                 
                  '''
             }
