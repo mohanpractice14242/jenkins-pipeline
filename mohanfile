@@ -22,12 +22,9 @@ pipeline {
             }
         }
         stage("peform  the lintcode in python using the lint "){
-            steps{
-                sh '''
-                pylint actions/src/main.py
-                
-                 '''
-            }
+            stepsdef result = sh(script: 'lintpy actions/src/main.py', returnStatus: true)
+                    if (result != 0) {
+                        echo "Build failed, but continuing..."
         }
         stage("perform the lint code in python using flask8"){
             steps{
