@@ -51,8 +51,7 @@ pipeline {
             steps{
                 sh'''
                 ls  -l
-                cd python-testing 
-                pytest tests'''
+                pytest python-testing/tests'''
             }
         }
 
