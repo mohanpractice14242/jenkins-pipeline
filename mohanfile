@@ -24,7 +24,7 @@ pipeline {
         stage("clone the test cases repo"){
             steps{
                 sh '''
-                git clone  https://github.com/mohantest14242/python-testing.git
+                ls -l
                 '''
             }
         }
