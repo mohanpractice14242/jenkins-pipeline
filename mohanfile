@@ -1,8 +1,6 @@
 pipeline {
     agent any
-    environment {
-        sudo_password = credentials('d0d11a00-371b-4b5f-b273-e05356033430') // Store password securely in Jenkins credentials
-    }
+ 
     stages {
         stage('Git Checkout Code') {
             steps {
@@ -26,7 +24,7 @@ pipeline {
         stage("installing the python "){
             steps{
                 sh '''
-                sh python.sh
+                ls -l
                 
                  '''
             }
