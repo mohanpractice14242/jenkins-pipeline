@@ -25,7 +25,6 @@ pipeline {
         stage('sonar-scanner'){
             steps{
                 sh'''
-                cd actions/src
                 sonar-scanner'''
             }
         }
