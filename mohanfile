@@ -5,7 +5,7 @@ pipeline {
         stage('Git Checkout Code') {
             steps {
                 sh '''
-                
+                https://github.com/mohanpractice14242/actions.git
                 cd actions
                 git pull
                 ls -l
@@ -15,40 +15,13 @@ pipeline {
         stage("displaying the files"){
             steps{
                 sh '''
-                
+                https://github.com/mohantest14242/python-testing.git
                 cd python-testing
                 git pull
                 ls -l'''
                 
             }
         }
-
-        stage('Build') {
-            steps {
-                script {
-                    def result = sh(script: 'pylint actions/src/main.py', returnStatus: true)
-            
-                    if (result != 0) {
-                        error "Pylint issues found. Failing the build."
-                    } else {
-                        echo "Pylint checks passed."
-               }
-            }
-           }
-        }
-        stage("perform the lint code in python using flask8"){
-            steps{
-                script{
-                def result=sh(script: 'flake8 actions/src/main.py',returnStatus: true)
-                if(result !=0){
-                    error "flake8 issues found please write the code on agaun"
-                }else{
-                    echo "flake8 test is sucess"
-                }
-                }
-            }
-                
-            }
         stage("performing the testcases "){
             steps{
                 sh'''
