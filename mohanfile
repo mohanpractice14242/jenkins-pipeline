@@ -5,7 +5,7 @@ pipeline {
         stage('Git Checkout Code') {
             steps {
                 sh '''
-                https://github.com/mohanpractice14242/actions.git
+                git clone https://github.com/mohanpractice14242/actions.git
                 cd actions
                 git pull
                 ls -l
@@ -15,7 +15,7 @@ pipeline {
         stage("displaying the files"){
             steps{
                 sh '''
-                https://github.com/mohantest14242/python-testing.git
+                git clone https://github.com/mohantest14242/python-testing.git
                 cd python-testing
                 git pull
                 ls -l'''
