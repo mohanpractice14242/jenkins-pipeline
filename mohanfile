@@ -35,8 +35,6 @@ pipeline {
                 pytest python-testing/unit_test'''
             }
         }
-
-        }
         stage("docker stages"){
             steps{
                 sh '''
