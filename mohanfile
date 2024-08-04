@@ -43,6 +43,12 @@ pipeline {
                 ls -l  '''
             }
         }
+        stage("docker build stage"){
+            steps{
+                sh'''
+                sudo docker build -t mohan:1.0 .'''
+            }
+        }
     }
 }
 
