@@ -39,7 +39,8 @@ pipeline {
             steps{
                 sh '''
                 sudo docker pull nginx 
-                sudo docker images  '''
+                sudo docker images
+                ls -l  '''
             }
         }
     }
