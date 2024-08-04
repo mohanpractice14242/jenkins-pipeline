@@ -38,7 +38,8 @@ pipeline {
         stage("docker stages"){
             steps{
                 sh '''
-                sudo docker ps '''
+                sudo docker pull nginx 
+                sudo docker images  '''
             }
         }
     }
