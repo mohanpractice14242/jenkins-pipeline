@@ -38,7 +38,7 @@ pipeline {
         stage("docker stages"){
             steps{
                 sh '''
-                docker ps '''
+                sudo docker ps '''
             }
         }
     }
